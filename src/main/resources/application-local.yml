@@ -1,0 +1,14 @@
+server:
+  port: 5555
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: Genius33Frozen
+
+
+client:
+  candidate:
+    url: http://localhost:2002

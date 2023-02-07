@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create company table
+      author: Chow
+      changes:
+        - createTable:
+            tableName: company
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: sum
+                  type: int
+

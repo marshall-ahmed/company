@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  postgredb:
+    container_name: postgredb
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Genius33Frozen
+    ports:
+      - "5432:5432"
+    expose:
+      - 5432

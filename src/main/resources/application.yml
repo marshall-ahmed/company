@@ -1,0 +1,33 @@
+server:
+  port: 9092
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://10.107.106.245:5432/postgres
+    username: postgres
+    password: Genius33Frozen
+  liquibase:
+    change-log: classpath:liquibase/changelog-master.yml
+  jpa:
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+
+feign:
+  httpclient:
+    disable-ssl-validation: true
+  client:
+    config:
+      default:
+        connectTimeout: 30000
+        readTimeout: 30000
+        loggerLevel: basic
+
+client:
+  candidate:
+    url: http://172.30.47.134:30080
+
+
