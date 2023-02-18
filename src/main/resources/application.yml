@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://10.107.106.245:5432/postgres
+    url: jdbc:postgresql://s-postgres:5432/postgres
     username: postgres
     password: Genius33Frozen
   liquibase:
@@ -28,6 +28,6 @@ feign:
 
 client:
   candidate:
-    url: http://172.30.47.134:30080
+    url: http://ms-candidate:8080
 
 

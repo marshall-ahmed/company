@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-company
+spec:
+  selector:
+    matchLabels:
+      app: company
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: company
+    spec:
+      containers:
+        - name: company
+          image: ${REPOSITORY_TAG}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ms-company
+spec:
+  selector:
+    app: company
+  ports:
+    - name: http
+      port: 9092
+
+  type: LoadBalancer

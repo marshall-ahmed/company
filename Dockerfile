@@ -1,11 +1,7 @@
-FROM adoptopenjdk/openjdk11:ubi
+FROM adoptopenjdk/openjdk11:latest
 
-VOLUME /tmp
+RUN mkdir /opt/app
 
-COPY build/libs/*.jar company-service.jar
+COPY ./build/libs/company.jar /opt/app/
 
-EXPOSE 80
-
-ENV JAVA_OPTS=""
-
-ENTRYPOINT ["java","-jar","/company-service.jar"]
+CMD ["java", "-jar", "/opt/app/company.jar"]
