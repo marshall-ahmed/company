@@ -20,8 +20,9 @@ spec:
               path: /readiness
               port: 9092
             successThreshold: 3
-            initialDelaySeconds: 5
+            initialDelaySeconds: 30
             periodSeconds: 10
+            timeoutSeconds: 30
           livenessProbe:
             httpGet:
               path: /health
