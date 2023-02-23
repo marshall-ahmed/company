@@ -26,7 +26,7 @@ spec:
             httpGet:
               path: /health
               port: 9092
-            initialDelaySeconds: 3
+            initialDelaySeconds: 30
             periodSeconds: 3
 ---
 apiVersion: v1
