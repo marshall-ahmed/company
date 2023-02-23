@@ -20,7 +20,7 @@ spec:
               path: /readiness
               port: 8080
             successThreshold: 3
-            initialDelaySeconds: 5
+            initialDelaySeconds: 30
             periodSeconds: 10
           livenessProbe:
             httpGet:
